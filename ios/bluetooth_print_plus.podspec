@@ -17,7 +17,9 @@ A new Flutter project.
   s.public_header_files = 'Classes/**/*.h'
   s.static_framework = true
   s.dependency 'Flutter'
-  s.dependency 'GSDK', '0.0.7'
+  # GSDK 0.0.7 vendored as xcframework (adds arm64 iOS Simulator slice)
+  s.vendored_frameworks = 'Frameworks/GSDK.xcframework'
+  s.frameworks = 'Foundation', 'UIKit', 'CoreBluetooth'
   s.platform = :ios, '11.0'
   s.static_framework = true
 
